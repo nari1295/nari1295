@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+   <title>Examples</title>
+</head>
+<body>
+   <div id='result'></div>
+   <script>
+      function alphaOrder(str){
+         var arr = str.split('');
+         arr.sort();
+         var sortedStr = arr.join('');
+         return sortedStr
+      }
+      document.getElementById('result').innerHTML = alphaOrder('webmaster');
+ var json ='{ "name": "Toyota Rav4", "engine": "2.5L", "price": 32000 }'
+   var obj = JSON.parse(json);
+   document.write(obj.name + "</br>");
+   document.write(obj.engine + "</br>");
+   document.write(obj.price);
+<p id="demo"></p>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    myResolve("TRUE");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+   </script>
+</body>
+</html>
